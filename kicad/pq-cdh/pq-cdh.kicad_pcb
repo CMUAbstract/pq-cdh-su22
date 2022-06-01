@@ -903,6 +903,11 @@
       (net 65 "Net-(C13-Pad1)") (pinfunction "1") (pintype "passive") (tstamp 72162b95-6656-47bb-aa96-2c3e0c0af0b2))
     (pad "2" smd rect locked (at 1.275 0 90) (size 1 1.8) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 66 "Net-(C12-Pad1)") (pinfunction "2") (pintype "passive") (tstamp 781f6d89-222e-4cec-88be-7126425f5f15))
+    (model "${KICAD6_3DMODEL_DIR}/ABS07AIG32768kHz71T.stp"
+      (offset (xyz -1.6 -0.75 -0.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "pq-cdh:TartanArtibeus_PinSocket_1x4" (layer "F.Cu")
@@ -1345,6 +1350,11 @@
       (net 72 "Net-(C10-Pad1)") (pinfunction "CRYSTAL_2") (pintype "passive") (tstamp 1655e2f8-c6ad-4d59-adac-e1ebc2b31f68))
     (pad "4" smd rect locked (at -1.15 -0.95 180) (size 1.1 1.3) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 3 "GND") (pinfunction "GND_2") (pintype "passive") (tstamp 855034a5-a5bb-4a80-ba23-8e99d7e5f326))
+    (model "${KICAD6_3DMODEL_DIR}/ABM8AIG25000MHZ122ZT3.stp"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "pq-cdh:CAPC1608X90N" (layer "F.Cu")
