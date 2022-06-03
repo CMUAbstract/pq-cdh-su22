@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>D:\CMU\Alok@CMU\SPT_CND_2022\HW\New_pq-cdh\pq-cdh-su22-master\kicad\pq-cdh\pq-cdh.kicad_sch</source>
-    <date>5/30/2022 9:48:05 PM</date>
+    <date>6/3/2022 3:54:35 PM</date>
     <tool>Eeschema (6.0.5)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>PQ CDH Schematic</title>
         <company>Carnegie Mellon University -- Alok Anand</company>
-        <rev>V1.0.1</rev>
+        <rev>V0.1.0</rev>
         <date/>
         <source>pq-cdh.kicad_sch</source>
         <comment number="1" value="Pocketqube Command and Data Handling"/>
@@ -130,88 +130,86 @@
       <tstamps>4f3df095-b688-49b6-bd83-abd34720e024</tstamps>
     </comp>
     <comp ref="C5">
-      <value>0603ZA220JAT2A</value>
-      <footprint>pq-cdh:CAPC1608X90N</footprint>
+      <value>0603ZC105JAT2A</value>
+      <footprint>CAPC1608X90N</footprint>
       <datasheet>https://componentsearchengine.com/Datasheets/1/06031A100FAT2A.pdf</datasheet>
       <fields>
-        <field name="Arrow Part Number">0603ZA220JAT2A</field>
-        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/0603za220jat2a/avx</field>
-        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol</field>
+        <field name="Arrow Part Number">0603ZC105JAT2A</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/0603zc105jat2a/avx</field>
+        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT FACTORY NOT ACCEPTING ORDERS</field>
         <field name="Height">0.9</field>
         <field name="Manufacturer_Name">AVX</field>
-        <field name="Manufacturer_Part_Number">0603ZA220JAT2A</field>
-        <field name="Mouser Part Number">581-0603ZA220JAT2A</field>
-        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZA220JAT2A</field>
+        <field name="Manufacturer_Part_Number">0603ZC105JAT2A</field>
+        <field name="Mouser Part Number">581-0603ZC105JAT2A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC105JAT2A</field>
       </fields>
-      <libsource lib="pq-cdh" part="0603ZA220JAT2A" description=""/>
-      <property name="Description" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol"/>
+      <libsource lib="pq-cdh" part="0603ZC105JAT2A" description=""/>
+      <property name="Description" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT FACTORY NOT ACCEPTING ORDERS"/>
       <property name="Height" value="0.9"/>
       <property name="Manufacturer_Name" value="AVX"/>
-      <property name="Manufacturer_Part_Number" value="0603ZA220JAT2A"/>
-      <property name="Mouser Part Number" value="581-0603ZA220JAT2A"/>
-      <property name="Mouser Price/Stock" value="https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZA220JAT2A"/>
-      <property name="Arrow Part Number" value="0603ZA220JAT2A"/>
-      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/0603za220jat2a/avx"/>
+      <property name="Manufacturer_Part_Number" value="0603ZC105JAT2A"/>
+      <property name="Mouser Part Number" value="581-0603ZC105JAT2A"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC105JAT2A"/>
+      <property name="Arrow Part Number" value="0603ZC105JAT2A"/>
+      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/0603zc105jat2a/avx"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="pq-cdh.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>058ee458-8467-49cd-bd7d-637124ee3647</tstamps>
+      <tstamps>5ec546ac-7231-4304-a794-04ec66a726d3</tstamps>
     </comp>
     <comp ref="C6">
-      <value>0603ZA220JAT2A</value>
-      <footprint>pq-cdh:CAPC1608X90N</footprint>
+      <value>0603ZC105JAT2A</value>
+      <footprint>CAPC1608X90N</footprint>
       <datasheet>https://componentsearchengine.com/Datasheets/1/06031A100FAT2A.pdf</datasheet>
       <fields>
-        <field name="Arrow Part Number">0603ZA220JAT2A</field>
-        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/0603za220jat2a/avx</field>
-        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol</field>
+        <field name="Arrow Part Number">0603ZC105JAT2A</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/0603zc105jat2a/avx</field>
+        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT FACTORY NOT ACCEPTING ORDERS</field>
         <field name="Height">0.9</field>
         <field name="Manufacturer_Name">AVX</field>
-        <field name="Manufacturer_Part_Number">0603ZA220JAT2A</field>
-        <field name="Mouser Part Number">581-0603ZA220JAT2A</field>
-        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZA220JAT2A</field>
+        <field name="Manufacturer_Part_Number">0603ZC105JAT2A</field>
+        <field name="Mouser Part Number">581-0603ZC105JAT2A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC105JAT2A</field>
       </fields>
-      <libsource lib="pq-cdh" part="0603ZA220JAT2A" description=""/>
-      <property name="Description" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol"/>
+      <libsource lib="pq-cdh" part="0603ZC105JAT2A" description=""/>
+      <property name="Description" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT FACTORY NOT ACCEPTING ORDERS"/>
       <property name="Height" value="0.9"/>
       <property name="Manufacturer_Name" value="AVX"/>
-      <property name="Manufacturer_Part_Number" value="0603ZA220JAT2A"/>
-      <property name="Mouser Part Number" value="581-0603ZA220JAT2A"/>
-      <property name="Mouser Price/Stock" value="https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZA220JAT2A"/>
-      <property name="Arrow Part Number" value="0603ZA220JAT2A"/>
-      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/0603za220jat2a/avx"/>
+      <property name="Manufacturer_Part_Number" value="0603ZC105JAT2A"/>
+      <property name="Mouser Part Number" value="581-0603ZC105JAT2A"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC105JAT2A"/>
+      <property name="Arrow Part Number" value="0603ZC105JAT2A"/>
+      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/0603zc105jat2a/avx"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="pq-cdh.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6e8c03c7-c318-4045-975d-11602cbf41fe</tstamps>
+      <tstamps>da725700-e73d-4e6a-abfc-f0dff826e428</tstamps>
     </comp>
     <comp ref="C7">
-      <value>0603ZA220JAT2A</value>
-      <footprint>pq-cdh:CAPC1608X90N</footprint>
+      <value>0603ZC104JAT2A</value>
+      <footprint>CAPC1608X90N</footprint>
       <datasheet>https://componentsearchengine.com/Datasheets/1/06031A100FAT2A.pdf</datasheet>
       <fields>
-        <field name="Arrow Part Number">0603ZA220JAT2A</field>
-        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/0603za220jat2a/avx</field>
-        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol</field>
+        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V .1uF X7R 0603 5%</field>
         <field name="Height">0.9</field>
         <field name="Manufacturer_Name">AVX</field>
-        <field name="Manufacturer_Part_Number">0603ZA220JAT2A</field>
-        <field name="Mouser Part Number">581-0603ZA220JAT2A</field>
-        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZA220JAT2A</field>
+        <field name="Manufacturer_Part_Number">0603ZC104JAT2A</field>
+        <field name="Mouser Part Number">581-0603ZC104JAT2A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC104JAT2A</field>
       </fields>
-      <libsource lib="pq-cdh" part="0603ZA220JAT2A" description=""/>
-      <property name="Description" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol"/>
+      <libsource lib="pq-cdh" part="0603ZC104JAT2A" description=""/>
+      <property name="Description" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V .1uF X7R 0603 5%"/>
       <property name="Height" value="0.9"/>
       <property name="Manufacturer_Name" value="AVX"/>
-      <property name="Manufacturer_Part_Number" value="0603ZA220JAT2A"/>
-      <property name="Mouser Part Number" value="581-0603ZA220JAT2A"/>
-      <property name="Mouser Price/Stock" value="https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZA220JAT2A"/>
-      <property name="Arrow Part Number" value="0603ZA220JAT2A"/>
-      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/0603za220jat2a/avx"/>
+      <property name="Manufacturer_Part_Number" value="0603ZC104JAT2A"/>
+      <property name="Mouser Part Number" value="581-0603ZC104JAT2A"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC104JAT2A"/>
+      <property name="Arrow Part Number" value=""/>
+      <property name="Arrow Price/Stock" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="pq-cdh.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6cb8feee-8988-4640-afc9-46235e233d55</tstamps>
+      <tstamps>1115fcd4-f202-4984-ad9e-98a09d587543</tstamps>
     </comp>
     <comp ref="C8">
       <value>GRM1857U1A103JA44D</value>
@@ -242,32 +240,30 @@
       <tstamps>76b177fb-37c7-4b81-8b69-94ce42637641</tstamps>
     </comp>
     <comp ref="C9">
-      <value>0603ZA220JAT2A</value>
-      <footprint>pq-cdh:CAPC1608X90N</footprint>
+      <value>0603ZC104JAT2A</value>
+      <footprint>CAPC1608X90N</footprint>
       <datasheet>https://componentsearchengine.com/Datasheets/1/06031A100FAT2A.pdf</datasheet>
       <fields>
-        <field name="Arrow Part Number">0603ZA220JAT2A</field>
-        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/0603za220jat2a/avx</field>
-        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol</field>
+        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V .1uF X7R 0603 5%</field>
         <field name="Height">0.9</field>
         <field name="Manufacturer_Name">AVX</field>
-        <field name="Manufacturer_Part_Number">0603ZA220JAT2A</field>
-        <field name="Mouser Part Number">581-0603ZA220JAT2A</field>
-        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZA220JAT2A</field>
+        <field name="Manufacturer_Part_Number">0603ZC104JAT2A</field>
+        <field name="Mouser Part Number">581-0603ZC104JAT2A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC104JAT2A</field>
       </fields>
-      <libsource lib="pq-cdh" part="0603ZA220JAT2A" description=""/>
-      <property name="Description" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol"/>
+      <libsource lib="pq-cdh" part="0603ZC104JAT2A" description=""/>
+      <property name="Description" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V .1uF X7R 0603 5%"/>
       <property name="Height" value="0.9"/>
       <property name="Manufacturer_Name" value="AVX"/>
-      <property name="Manufacturer_Part_Number" value="0603ZA220JAT2A"/>
-      <property name="Mouser Part Number" value="581-0603ZA220JAT2A"/>
-      <property name="Mouser Price/Stock" value="https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZA220JAT2A"/>
-      <property name="Arrow Part Number" value="0603ZA220JAT2A"/>
-      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/0603za220jat2a/avx"/>
+      <property name="Manufacturer_Part_Number" value="0603ZC104JAT2A"/>
+      <property name="Mouser Part Number" value="581-0603ZC104JAT2A"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC104JAT2A"/>
+      <property name="Arrow Part Number" value=""/>
+      <property name="Arrow Price/Stock" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="pq-cdh.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ce392989-ee9d-4804-b1f7-0b667cb21381</tstamps>
+      <tstamps>71a2b18d-e8e2-4f75-98d7-d4c3a0bb44b9</tstamps>
     </comp>
     <comp ref="C10">
       <value>0603ZA220JAT2A</value>
@@ -382,32 +378,30 @@
       <tstamps>6866dbaf-244a-439c-8fef-f9f4614c4a54</tstamps>
     </comp>
     <comp ref="C14">
-      <value>0603ZA220JAT2A</value>
-      <footprint>pq-cdh:CAPC1608X90N</footprint>
+      <value>0603ZC104JAT2A</value>
+      <footprint>CAPC1608X90N</footprint>
       <datasheet>https://componentsearchengine.com/Datasheets/1/06031A100FAT2A.pdf</datasheet>
       <fields>
-        <field name="Arrow Part Number">0603ZA220JAT2A</field>
-        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/0603za220jat2a/avx</field>
-        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol</field>
+        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V .1uF X7R 0603 5%</field>
         <field name="Height">0.9</field>
         <field name="Manufacturer_Name">AVX</field>
-        <field name="Manufacturer_Part_Number">0603ZA220JAT2A</field>
-        <field name="Mouser Part Number">581-0603ZA220JAT2A</field>
-        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZA220JAT2A</field>
+        <field name="Manufacturer_Part_Number">0603ZC104JAT2A</field>
+        <field name="Mouser Part Number">581-0603ZC104JAT2A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC104JAT2A</field>
       </fields>
-      <libsource lib="pq-cdh" part="0603ZA220JAT2A" description=""/>
-      <property name="Description" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol"/>
+      <libsource lib="pq-cdh" part="0603ZC104JAT2A" description=""/>
+      <property name="Description" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V .1uF X7R 0603 5%"/>
       <property name="Height" value="0.9"/>
       <property name="Manufacturer_Name" value="AVX"/>
-      <property name="Manufacturer_Part_Number" value="0603ZA220JAT2A"/>
-      <property name="Mouser Part Number" value="581-0603ZA220JAT2A"/>
-      <property name="Mouser Price/Stock" value="https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZA220JAT2A"/>
-      <property name="Arrow Part Number" value="0603ZA220JAT2A"/>
-      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/0603za220jat2a/avx"/>
+      <property name="Manufacturer_Part_Number" value="0603ZC104JAT2A"/>
+      <property name="Mouser Part Number" value="581-0603ZC104JAT2A"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC104JAT2A"/>
+      <property name="Arrow Part Number" value=""/>
+      <property name="Arrow Price/Stock" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="pq-cdh.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ed29d9d1-3f72-4f67-ab16-57b252ed551a</tstamps>
+      <tstamps>97639df3-555a-497b-9ea7-89c307d68d8d</tstamps>
     </comp>
     <comp ref="C15">
       <value>597D158X9004R2T</value>
@@ -961,6 +955,27 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="pq-cdh" part="0603ZC105JAT2A">
+      <docs>https://componentsearchengine.com/Datasheets/1/06031A100FAT2A.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">0603ZC105JAT2A</field>
+        <field name="Footprint">CAPC1608X90N</field>
+        <field name="Datasheet">https://componentsearchengine.com/Datasheets/1/06031A100FAT2A.pdf</field>
+        <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT FACTORY NOT ACCEPTING ORDERS</field>
+        <field name="Height">0.9</field>
+        <field name="Manufacturer_Name">AVX</field>
+        <field name="Manufacturer_Part_Number">0603ZC105JAT2A</field>
+        <field name="Mouser Part Number">581-0603ZC105JAT2A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=581-0603ZC105JAT2A</field>
+        <field name="Arrow Part Number">0603ZC105JAT2A</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/0603zc105jat2a/avx</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="pq-cdh" part="597D158X9004R2T">
       <docs>http://www.vishay.com/doc?40047</docs>
       <fields>
@@ -1318,58 +1333,58 @@
       <node ref="IC1" pin="59" pinfunction="PB7" pintype="passive"/>
       <node ref="J7" pin="12" pinfunction="Pin_12" pintype="passive"/>
     </net>
-    <net code="13" name="/LED1">
+    <net code="13" name="/IO1_WP">
+      <node ref="IC1" pin="10" pinfunction="PC2" pintype="passive"/>
+      <node ref="IC2" pin="3" pinfunction="WP#(IO2)" pintype="passive"/>
+    </net>
+    <net code="14" name="/IO2_HR">
+      <node ref="IC1" pin="11" pinfunction="PC3" pintype="passive"/>
+      <node ref="IC2" pin="7" pinfunction="HOLD#_OR__RESET#(IO3)" pintype="passive"/>
+    </net>
+    <net code="15" name="/LED1">
       <node ref="IC1" pin="51" pinfunction="PC10" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
     </net>
-    <net code="14" name="/LED2">
+    <net code="16" name="/LED2">
       <node ref="IC1" pin="53" pinfunction="PC12" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
     </net>
-    <net code="15" name="/LPUART_CTS">
+    <net code="17" name="/LPUART_CTS">
       <node ref="IC1" pin="34" pinfunction="PB13" pintype="passive"/>
       <node ref="J2" pin="9" pinfunction="Pin_9" pintype="passive"/>
     </net>
-    <net code="16" name="/LPUART_RTS">
+    <net code="18" name="/LPUART_RTS">
       <node ref="IC1" pin="33" pinfunction="PB12" pintype="passive"/>
       <node ref="J2" pin="12" pinfunction="Pin_12" pintype="passive"/>
     </net>
-    <net code="17" name="/LPUART_RX">
+    <net code="19" name="/LPUART_RX">
       <node ref="IC1" pin="29" pinfunction="PB10" pintype="passive"/>
       <node ref="J2" pin="11" pinfunction="Pin_11" pintype="passive"/>
     </net>
-    <net code="18" name="/LPUART_TX">
+    <net code="20" name="/LPUART_TX">
       <node ref="IC1" pin="30" pinfunction="PB11" pintype="passive"/>
       <node ref="J2" pin="10" pinfunction="Pin_10" pintype="passive"/>
     </net>
-    <net code="19" name="/NRST">
+    <net code="21" name="/NRST">
       <node ref="C9" pin="1" pintype="passive"/>
       <node ref="IC1" pin="7" pinfunction="NRST" pintype="passive"/>
       <node ref="J5" pin="7" pinfunction="Pin_7" pintype="passive"/>
     </net>
-    <net code="20" name="/QUADSPI_BK1_NCS">
-      <node ref="IC1" pin="16" pinfunction="PA2" pintype="passive"/>
+    <net code="22" name="/SPI1_MISO">
+      <node ref="IC1" pin="56" pinfunction="PB4" pintype="passive"/>
+      <node ref="IC2" pin="2" pinfunction="SO(IO1)" pintype="passive"/>
+    </net>
+    <net code="23" name="/SPI1_MOSI">
+      <node ref="IC1" pin="57" pinfunction="PB5" pintype="passive"/>
+      <node ref="IC2" pin="5" pinfunction="SI(IO0)" pintype="passive"/>
+    </net>
+    <net code="24" name="/SPI1_NSS">
+      <node ref="IC1" pin="26" pinfunction="PB0" pintype="passive"/>
       <node ref="IC2" pin="1" pinfunction="CE#" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
     </net>
-    <net code="21" name="/QUADSPI_BK2_IO0">
-      <node ref="IC1" pin="9" pinfunction="PC1" pintype="passive"/>
-      <node ref="IC2" pin="5" pinfunction="SI(IO0)" pintype="passive"/>
-    </net>
-    <net code="22" name="/QUADSPI_BK2_IO1">
-      <node ref="IC1" pin="10" pinfunction="PC2" pintype="passive"/>
-      <node ref="IC2" pin="2" pinfunction="SO(IO1)" pintype="passive"/>
-    </net>
-    <net code="23" name="/QUADSPI_BK2_IO2">
-      <node ref="IC1" pin="11" pinfunction="PC3" pintype="passive"/>
-      <node ref="IC2" pin="3" pinfunction="WP#(IO2)" pintype="passive"/>
-    </net>
-    <net code="24" name="/QUADSPI_BK2_IO3">
-      <node ref="IC1" pin="24" pinfunction="PC4" pintype="passive"/>
-      <node ref="IC2" pin="7" pinfunction="HOLD#_OR__RESET#(IO3)" pintype="passive"/>
-    </net>
-    <net code="25" name="/QUADSPI_CLK">
-      <node ref="IC1" pin="17" pinfunction="PA3" pintype="passive"/>
+    <net code="25" name="/SPI1_SCK">
+      <node ref="IC1" pin="55" pinfunction="PB3" pintype="passive"/>
       <node ref="IC2" pin="6" pinfunction="SCK" pintype="passive"/>
     </net>
     <net code="26" name="/SWCLK">
@@ -1502,50 +1517,50 @@
     <net code="45" name="unconnected-(IC1-Pad8)">
       <node ref="IC1" pin="8" pinfunction="PC0" pintype="passive+no_connect"/>
     </net>
-    <net code="46" name="unconnected-(IC1-Pad14)">
+    <net code="46" name="unconnected-(IC1-Pad9)">
+      <node ref="IC1" pin="9" pinfunction="PC1" pintype="passive+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(IC1-Pad14)">
       <node ref="IC1" pin="14" pinfunction="PA0" pintype="passive+no_connect"/>
     </net>
-    <net code="47" name="unconnected-(IC1-Pad15)">
+    <net code="48" name="unconnected-(IC1-Pad15)">
       <node ref="IC1" pin="15" pinfunction="PA1" pintype="passive+no_connect"/>
     </net>
-    <net code="48" name="unconnected-(IC1-Pad21)">
+    <net code="49" name="unconnected-(IC1-Pad16)">
+      <node ref="IC1" pin="16" pinfunction="PA2" pintype="passive+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(IC1-Pad17)">
+      <node ref="IC1" pin="17" pinfunction="PA3" pintype="passive+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(IC1-Pad21)">
       <node ref="IC1" pin="21" pinfunction="PA5" pintype="passive+no_connect"/>
     </net>
-    <net code="49" name="unconnected-(IC1-Pad23)">
+    <net code="52" name="unconnected-(IC1-Pad23)">
       <node ref="IC1" pin="23" pinfunction="PA7" pintype="passive+no_connect"/>
     </net>
-    <net code="50" name="unconnected-(IC1-Pad25)">
+    <net code="53" name="unconnected-(IC1-Pad24)">
+      <node ref="IC1" pin="24" pinfunction="PC4" pintype="passive+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(IC1-Pad25)">
       <node ref="IC1" pin="25" pinfunction="PC5" pintype="passive+no_connect"/>
     </net>
-    <net code="51" name="unconnected-(IC1-Pad26)">
-      <node ref="IC1" pin="26" pinfunction="PB0" pintype="passive+no_connect"/>
-    </net>
-    <net code="52" name="unconnected-(IC1-Pad27)">
+    <net code="55" name="unconnected-(IC1-Pad27)">
       <node ref="IC1" pin="27" pinfunction="PB1" pintype="passive+no_connect"/>
     </net>
-    <net code="53" name="unconnected-(IC1-Pad28)">
+    <net code="56" name="unconnected-(IC1-Pad28)">
       <node ref="IC1" pin="28" pinfunction="PB2" pintype="passive+no_connect"/>
     </net>
-    <net code="54" name="unconnected-(IC1-Pad35)">
+    <net code="57" name="unconnected-(IC1-Pad35)">
       <node ref="IC1" pin="35" pinfunction="PB14" pintype="passive+no_connect"/>
     </net>
-    <net code="55" name="unconnected-(IC1-Pad36)">
+    <net code="58" name="unconnected-(IC1-Pad36)">
       <node ref="IC1" pin="36" pinfunction="PB15" pintype="passive+no_connect"/>
     </net>
-    <net code="56" name="unconnected-(IC1-Pad50)">
+    <net code="59" name="unconnected-(IC1-Pad50)">
       <node ref="IC1" pin="50" pinfunction="PA15" pintype="passive+no_connect"/>
     </net>
-    <net code="57" name="unconnected-(IC1-Pad54)">
+    <net code="60" name="unconnected-(IC1-Pad54)">
       <node ref="IC1" pin="54" pinfunction="PD2" pintype="passive+no_connect"/>
-    </net>
-    <net code="58" name="unconnected-(IC1-Pad55)">
-      <node ref="IC1" pin="55" pinfunction="PB3" pintype="passive+no_connect"/>
-    </net>
-    <net code="59" name="unconnected-(IC1-Pad56)">
-      <node ref="IC1" pin="56" pinfunction="PB4" pintype="passive+no_connect"/>
-    </net>
-    <net code="60" name="unconnected-(IC1-Pad57)">
-      <node ref="IC1" pin="57" pinfunction="PB5" pintype="passive+no_connect"/>
     </net>
     <net code="61" name="unconnected-(J2-Pad1)">
       <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive+no_connect"/>
