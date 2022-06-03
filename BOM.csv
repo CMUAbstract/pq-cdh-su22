@@ -1,9 +1,10 @@
 Label,Count,Mfr Id,Mouser Id,Componentsearchengine.com url,Description,Manufacturer_Name,Manufacturer_Part_Number
 C1,1,GRM188C71A475KE21D,81-GRM188C71A475KE2D,https://componentsearchengine.com/part-view/GRM188C71A475KE21D/Murata%20Electronics,Multilayer Ceramic Capacitors MLCC - SMD/SMT,Murata Electronics,GRM188C71A475KE21D
-"C2, C3, C4",3,0603ZC104JAT2A,581-0603ZC104JAT2A,https://componentsearchengine.com/part-view/0603ZC104JAT2A/AVX,Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V .1uF X7R 0603 5%,AVX,0603ZC104JAT2A
-"C5, C6, C7, C9, C10, C11, C12, C13, C14",9,0603ZA220JAT2A,581-0603ZA220JAT2A,https://componentsearchengine.com/part-view/0603ZA220JAT2A/AVX,Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol,AVX,0603ZA220JAT2A
+"C2, C3, C4, C7, C9, C14",6,0603ZC104JAT2A,581-0603ZC104JAT2A,https://componentsearchengine.com/part-view/0603ZC104JAT2A/AVX,Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V .1uF X7R 0603 5%,AVX,0603ZC104JAT2A
+"C5, C6",2,0603ZC105JAT2A,581-0603ZC105JAT2A,https://componentsearchengine.com/part-view/0603ZC105JAT2A/AVX,Multilayer Ceramic Capacitors MLCC - SMD/SMT FACTORY NOT ACCEPTING ORDERS,AVX,0603ZC105JAT2A
 C8,1,GRM1857U1A103JA44D,81-GRM1857U1A103JA4D,https://componentsearchengine.com/part-view/GRM1857U1A103JA44D/Murata%20Electronics,Capacitor GRM18_0.10 L=1.6mm W=0.8mm T=0.5mm,Murata Electronics,GRM1857U1A103JA44D
-C15,1,597D158X9004R2T,71-597D158X9004R2T,https://componentsearchengine.com/part-view/597D158X9004R2T/Vishay,"Solid Tantalum Chip Capacitors TANTAMOUNT(TM), Ultra-Low ESR, Conformal Coated, Maximum CV",Vishay,597D158X9004R2T
+"C10, C11, C12, C13",4,0603ZA220JAT2A,581-0603ZA220JAT2A,https://componentsearchengine.com/part-view/0603ZA220JAT2A/AVX,Multilayer Ceramic Capacitors MLCC - SMD/SMT 10V 22pF C0G 0603 5% Tol,AVX,0603ZA220JAT2A
+C15,1,597D158X9004R2T,71-597D158X9004R2T,https://componentsearchengine.com/part-view/597D158X9004R2T/Vishay,Cap for MCU VBAT; 1500 uF +/- 10 %; 4 VDC; 15 mOhm ESR; 60 uA leakage current; -55 - +125 C,Vishay,597D158X9004R2T
 FB1,1,MMZ1608S601ATD25,810-MMZ1608S601ATD25,https://componentsearchengine.com/part-view/MMZ1608S601ATD25/TDK,Ferrite Beads Multi-Layer 600Ohm 25% 100MHz 500mA 350mOhm DCR 0603 Automotive T/R,TDK,MMZ1608S601ATD25
 IC1,1,STM32L496RGT3,511-STM32L496RGT3,https://componentsearchengine.com/part-view/STM32L496RGT3/STMicroelectronics,"STMICROELECTRONICS - STM32L496RGT3 - MCU, ARM CORTEX-M4, 80MHZ, LQFP-64",STMicroelectronics,STM32L496RGT3
 IC2,1,IS25LP128F-JBLA3,870-IS25LP128F-JBLA3,https://componentsearchengine.com/part-view/IS25LP128F-JBLA3/Integrated%20Silicon%20Solution%20Inc.,NOR Flash 128M 2.3-3.6V 166Mhz Serial NOR Flash,Integrated Silicon Solution Inc.,IS25LP128F-JBLA3
