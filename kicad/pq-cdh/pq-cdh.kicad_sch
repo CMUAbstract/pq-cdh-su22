@@ -6,7 +6,7 @@
 
   (title_block
     (title "PQ CDH Schematic")
-    (rev "V1.0.1")
+    (rev "V0.1.0")
     (company "Carnegie Mellon University -- Alok Anand")
     (comment 1 "Pocketqube Command and Data Handling")
   )
@@ -1708,7 +1708,6 @@
     )
   )
 
-
   (junction (at 129.54 133.35) (diameter 0) (color 0 0 0 0)
     (uuid 0a752da1-ca42-4d09-98d7-fce6c1f0284b)
   )
@@ -1805,9 +1804,9 @@
   (no_connect (at 187.96 99.06) (uuid 3e50d217-9cbb-4bc0-9b25-7b06f7535813))
   (no_connect (at 187.96 101.6) (uuid 3e50d217-9cbb-4bc0-9b25-7b06f7535814))
   (no_connect (at 93.98 86.36) (uuid 5f92a297-df6f-4c13-a599-df989a9d4f7f))
-  (no_connect (at 93.98 88.9) (uuid 5f92a297-df6f-4c13-a599-df989a9d4f7f))
+  (no_connect (at 93.98 88.9) (uuid 5f92a297-df6f-4c13-a599-df989a9d4f80))
   (no_connect (at 93.98 68.58) (uuid ae0e855f-8771-4f50-bc7a-b0ea2b2a9709))
-  (no_connect (at 68.58 50.8) (uuid ae0e855f-8771-4f50-bc7a-b0ea2b2a9709))
+  (no_connect (at 68.58 50.8) (uuid ae0e855f-8771-4f50-bc7a-b0ea2b2a970a))
   (no_connect (at 93.98 104.14) (uuid eb33c298-4c37-437a-8f72-ccf3a2f8267c))
   (no_connect (at 40.64 73.66) (uuid eb33c298-4c37-437a-8f72-ccf3a2f8267d))
   (no_connect (at 40.64 76.2) (uuid eb33c298-4c37-437a-8f72-ccf3a2f8267e))
