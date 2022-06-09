@@ -1,4 +1,4 @@
-20262584447065120
+20264239244658749
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -85882,3 +85882,10 @@ TartanArtibeus_PinSocket_1x16
 0
 16
 16
+pq-cdh
+TestPoint_Pad_D1.0mm
+SMD pad as test Point, diameter 1.0mm
+test point SMD pad
+0
+1
+1
