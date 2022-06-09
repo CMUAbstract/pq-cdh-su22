@@ -24,4 +24,21 @@ Pocketqube command and data handling board
 Written by Bradley Denby  
 Other contributors: None
 
+## Update
+
+PQ-CDH Version 0.1.0 : 
+
+1. Transferred design scheamtic and PCB from Kicad5 to Kicad6
+2. Mounting holes adjustment same as referred to comm-401 board.
+3. Reduced board dimension 43 x 43 mm
+4. Removing 5th Pin from upper and lower right
+
+PQ-CDH Version 0.1.1
+
+1. Changed VDD, GND, SWDIO, and SWCLK to lower left to right 4 pins
+2. Changed "PQ CDH v0.1.0" to "PQ CDH v0.1.1"
+3. Adjusted controller and Conn_02x06_Odd_Even, for mounting hole clearance.
+4. Adjusted Conn_02x06_Odd_Even in vertically aligned along with aligned to top and bottom connector holes.
+5. Addition of 4 testpads added between oscillator and its capacitor.
+
 See the top-level [LICENSE](LICENSE) file for the license.
