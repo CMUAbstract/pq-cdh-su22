@@ -41,4 +41,11 @@ PQ-CDH Version 0.1.1
 4. Adjusted Conn_02x06_Odd_Even in vertically aligned along with aligned to top and bottom connector holes.
 5. Addition of 4 testpads added between oscillator and its capacitor.
 
+PQ-CDH Version 0.2.0
+
+1. I2C3 SDA and SCL to pins 1 and 2 on the bottom header row
+2. ADC to pin 3 on the bottom header row
+3. unused GPIO to pins 4 and 5 on bottom header row
+
+
 See the top-level [LICENSE](LICENSE) file for the license.
