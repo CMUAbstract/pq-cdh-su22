@@ -2,6 +2,14 @@
 
 Pocketqube command and data handling board
 
+**Dependencies**
+
+```bash
+sudo apt install build-essential cmake gcc git libusb-1.0-0 libusb-1.0-0-dev libgtk-3-dev
+cd $HOME/git-repos/cote/scripts
+./setup_dependencies.sh $HOME/sw
+```
+
 ## Directory Contents
 
 * [3d-models](3d-models/README.md): Contains copies of `.stp` 3D model files
