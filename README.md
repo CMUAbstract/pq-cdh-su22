@@ -10,6 +10,10 @@ cd $HOME/git-repos/cote/scripts
 ./setup_dependencies.sh $HOME/sw
 ```
 
+# Useful link
+
+* [libopencm3](http://libopencm3.org/docs/latest/stm32l4/html/modules.html) : Open source firmware link STM
+
 ## Directory Contents
 
 * [3d-models](3d-models/README.md): Contains copies of `.stp` 3D model files
