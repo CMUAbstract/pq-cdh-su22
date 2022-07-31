@@ -10,9 +10,9 @@ cd $HOME/git-repos/cote/scripts
 ./setup_dependencies.sh $HOME/sw
 ```
 
-# Useful link
+## Useful link
 
-* [libopencm3](http://libopencm3.org/docs/latest/stm32l4/html/modules.html) : Open source firmware link STM
+* [libopencm3](http://libopencm3.org/docs/latest/stm32l4/html/modules.html) : STM open source firmware link
 
 ## Directory Contents
 
