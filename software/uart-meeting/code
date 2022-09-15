@@ -1,0 +1,44 @@
+usart_send_blocking(USART1,'\r');
+    usart_send_blocking(USART1,'\n');
+    usart_send_blocking(USART1,'W');
+    usart_send_blocking(USART1,'e');
+    usart_send_blocking(USART1,'l');
+    usart_send_blocking(USART1,'c');
+    usart_send_blocking(USART1,'o');
+    usart_send_blocking(USART1,'m');
+    usart_send_blocking(USART1,'e');
+    usart_send_blocking(USART1,' ');
+    usart_send_blocking(USART1,'t');
+    usart_send_blocking(USART1,'o');
+    usart_send_blocking(USART1,' ');
+    usart_send_blocking(USART1,'A');
+    usart_send_blocking(USART1,'b');
+    usart_send_blocking(USART1,'s');
+    usart_send_blocking(USART1,'t');
+    usart_send_blocking(USART1,'r');
+    usart_send_blocking(USART1,'a');
+    usart_send_blocking(USART1,'c');
+    usart_send_blocking(USART1,'t');
+    usart_send_blocking(USART1,' ');
+    usart_send_blocking(USART1,'l');
+    usart_send_blocking(USART1,'a');
+    usart_send_blocking(USART1,'b');
+    usart_send_blocking(USART1,'!');
+
+
+
+
+usart_send_blocking(USART1,'H');
+    usart_send_blocking(USART1,'e');
+    usart_send_blocking(USART1,'l');
+    usart_send_blocking(USART1,'l');
+    usart_send_blocking(USART1,'o');
+    usart_send_blocking(USART1,' ');
+    usart_send_blocking(USART1,'w');
+    usart_send_blocking(USART1,'o');
+    usart_send_blocking(USART1,'r');
+    usart_send_blocking(USART1,'l');
+    usart_send_blocking(USART1,'d');
+    usart_send_blocking(USART1,'!');    
+    usart_send_blocking(USART1,'\r');
+    usart_send_blocking(USART1,'\n');

@@ -17,7 +17,7 @@ int main(void) {
   gpio_set(GPIOC, GPIO10);
   gpio_clear(GPIOC, GPIO12);
   while(1) {
-    for(int i=0; i<400000; i++) {
+    for(int i=0; i<1600000; i++) {
       __asm__("nop");
     }
     gpio_toggle(GPIOC, GPIO10);
