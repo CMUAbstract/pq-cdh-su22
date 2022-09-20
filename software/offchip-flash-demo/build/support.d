@@ -1,9 +1,15 @@
 build/support.o: pq-cdh/support.c \
- /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /Users/saraltayal/Desktop/pocketqube/pq-cdh-su22/utilities/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /Users/saraltayal/Desktop/pocketqube/pq-cdh-su22/utilities/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+ /Users/saraltayal/Desktop/pocketqube/pq-cdh-su22/utilities/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+ /Users/saraltayal/Desktop/pocketqube/pq-cdh-su22/utilities/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+ /Users/saraltayal/Desktop/pocketqube/pq-cdh-su22/utilities/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+ /Users/saraltayal/Desktop/pocketqube/pq-cdh-su22/utilities/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+ /Users/saraltayal/Desktop/pocketqube/pq-cdh-su22/utilities/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
  ../libopencm3/include/libopencm3/cm3/scb.h \
  ../libopencm3/include/libopencm3/cm3/memorymap.h \
  ../libopencm3/include/libopencm3/cm3/common.h \
- /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+ /Users/saraltayal/Desktop/pocketqube/pq-cdh-su22/utilities/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
  ../libopencm3/include/libopencm3/stm32/flash.h \
  ../libopencm3/include/libopencm3/stm32/memorymap.h \
  ../libopencm3/include/libopencm3/stm32/l4/memorymap.h \
@@ -27,5 +33,4 @@ build/support.o: pq-cdh/support.c \
  ../libopencm3/include/libopencm3/stm32/common/usart_common_v2.h \
  ../libopencm3/include/libopencm3/stm32/quadspi.h \
  ../libopencm3/include/libopencm3/stm32/l4/quadspi.h \
- ../libopencm3/include/libopencm3/stm32/common/quadspi_common_v1.h \
- /home/abstract/git-repos/pq-cdh-su22-master/software/offchip-flash-demo/pq-cdh/support.h
+ ../libopencm3/include/libopencm3/stm32/common/quadspi_common_v1.h

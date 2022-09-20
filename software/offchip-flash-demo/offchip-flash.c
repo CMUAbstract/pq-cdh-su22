@@ -7,7 +7,7 @@
 //#include <libopencm3/stm32/flash.h>
 #include <libopencm3/stm32/usart.h>
 #include <libopencm3/stm32/dma.h>
-#include </home/abstract/git-repos/pq-cdh-su22-master/software/offchip-flash-demo/pq-cdh/support.h>
+//#include </home/abstract/git-repos/pq-cdh-su22-master/software/offchip-flash-demo/pq-cdh/support.h>
 
 //void init_clock(void);
 //void init_led(void);
