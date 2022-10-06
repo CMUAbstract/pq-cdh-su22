@@ -22,19 +22,12 @@
 // Initialization functions
 
 void init_clock(void) {
-  rcc_osc_on(RCC_HSI16);                    // 16 MHz internal RC oscillator
-  rcc_wait_for_osc_ready(RCC_HSI16);        // Wait until oscillator is ready
   rcc_set_sysclk_source(RCC_CFGR_SW_PLL); // Sets sysclk source for RTOS
   rcc_set_hpre(RCC_CFGR_HPRE_NODIV);        // AHB at 80 MHz (80 MHz max.)
   rcc_set_ppre1(RCC_CFGR_PPRE_DIV2);       // APB1 at 40 MHz (80 MHz max.)
   rcc_set_ppre2(RCC_CFGR_PPRE_NODIV);      // APB2 at 80 MHz (80 MHz max.)
-  //flash_prefetch_enable();                  // Enable instr prefetch buffer
-  flash_set_ws(FLASH_ACR_LATENCY_4WS);      // RM0351: 4 WS for 80 MHz
-  //flash_dcache_enable();                    // Enable data cache
-  //flash_icache_enable();                    // Enable instruction cache
   rcc_set_main_pll(                         // Setup 80 MHz clock
    RCC_PLLCFGR_PLLSRC_HSI16,                // PLL clock source
-  //RCC_PLLCFGR_PLLSRC_NONE,
    4,                                       // PLL VCO division factor
    40,                                      // PLL VCO multiplication factor
    0,                                       // PLL P clk output division factor
@@ -42,11 +35,16 @@ void init_clock(void) {
    RCC_PLLCFGR_PLLR_DIV2                    // PLL sysclk output division factor
   );
   // 16MHz/4 = 4MHz; 4MHz*40 = 160MHz VCO; 160MHz/2 = 80MHz PLL
+  // 16MHz/4 = 4MHz; 4MHz*16 = 64MHz VCO; 64MHz/2 = 32MHz PLL
+  // 16MHz/4 = 4MHz; 4MHz*8 = 32MHz VCO; 32MHz/2 = 16MHz PLL
+  // 16MHz/4 = 4MHz; 4MHz*4 = 16MHz VCO; 16MHz/2 = 8MHz PLL
+  // 16MHz/4 = 4MHz; 4MHz*1 = 4MHz VCO; 2MHz/2 = 2MHz PLL
   
+  rcc_osc_on(RCC_HSI16);                      // 80 MHz PLL
+  rcc_wait_for_osc_ready(RCC_HSI16);          // Wait until PLL is ready  
+
   rcc_osc_on(RCC_PLL);                      // 80 MHz PLL
   rcc_wait_for_osc_ready(RCC_PLL);          // Wait until PLL is ready
-  //rcc_set_sysclk_source(RCC_CFGR_SW_PLL);   // Sets sysclk source for RTOS
-  //rcc_wait_for_sysclk_status(RCC_PLL);*/
   
   rcc_ahb_frequency = 80000000;//160000000;//80000000;
   rcc_apb1_frequency = 40000000;
