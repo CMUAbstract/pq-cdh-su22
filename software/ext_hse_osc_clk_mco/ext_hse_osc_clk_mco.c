@@ -23,6 +23,29 @@ int main(void) {
   gpio_mode_setup(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO8);
   gpio_set_output_options(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO8);
   gpio_set(GPIOA, GPIO8);
+  
+  
+  /*
+  GPIO_MODE_AF : GPIO alternate function ( Analog/Digital)
+ gpio_set_output_options 
+ # Parameters
+[in]	gpioport	Unsigned int32. Port identifier GPIO Port IDs
+[in]	otype	Unsigned int8. Pin output type GPIO Output Pin Driver Type
+  GPIO_OTYPE_PP, GPIO_OTYPE_D   PushPull. OpenDrain
+[in]	speed	Unsigned int8. Pin speed GPIO Output Pin Speed
+   #define 	GPIO_OSPEED_LOW   0x0 
+  #define 	GPIO_OSPEED_MED   0x1
+  #define 	GPIO_OSPEED_HIGH   0x2
+  #define 	GPIO_OSPEED_VERYHIGH   0x3
+  #define 	GPIO_OSPEED_2MHZ   0x0
+  #define 	GPIO_OSPEED_25MHZ   0x1
+  #define 	GPIO_OSPEED_50MHZ   0x2
+  #define 	GPIO_OSPEED_100MHZ   0x3
+[in]	gpios	Unsigned int16. Pin identifiers GPIO Pin Identifiers 
+If multiple pins are to be set, use bitwise OR '|' to separate them
+  
+  
+  */
  
   //RCC_MCOConfig(RCC_MCOSource_PLLCLK_Div2); // Put on MCO pin the: System clock selected
   //rcc_set_mco(RCC_CFGR_MCO_PLL); //for PLL clk test
