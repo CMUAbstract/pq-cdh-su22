@@ -14,18 +14,16 @@ int main(void) {
 
   init_clock();
 
-  //GPIO_InitTypeDef GPIO_InitStructure;
-
-  //RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
   rcc_periph_clock_enable(RCC_GPIOA);
 
   /* Output clock on MCO pin ---------------------------------------------*/
   gpio_mode_setup(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO8);
-  gpio_set_output_options(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO8);
+  gpio_set_output_options(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_100MHZ, GPIO8);
   gpio_set(GPIOA, GPIO8);
-  rcc_set_mco(RCC_CFGR_MCO_PLL); //for PLL clk test
-  //rcc_set_mco(RCC_CFGR_MCO_HSE); //for HSC OSC test
+  rcc_set_mco(RCC_CFGR_MCO_PLL);  //for PLL clk test derived from internal HSI : 16 MHz
+  
 
+  // LED pin enable for debugging
   rcc_periph_clock_enable(RCC_GPIOC);
   gpio_mode_setup(GPIOC, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO10);
   gpio_mode_setup(GPIOC, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO12);
