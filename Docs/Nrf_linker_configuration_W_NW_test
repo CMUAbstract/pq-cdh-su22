@@ -14,3 +14,47 @@
 // BLANK  // Flash
  // FLASH (rx) : ORIGIN = 0x00000000, LENGTH = 0x40000
  // RAM (rwx) :  ORIGIN = 0x20000000, LENGTH = 0x4000
+ 
+ 
+ CDH - EPS control 
+
+// initialization
+  init_clock();
+  init_led();
+  init_uart();
+  
+  // enabling pheripherals to control EPS board
+  
+  rcc_periph_clock_enable(RCC_GPIOA);
+  rcc_periph_clock_enable(RCC_GPIOD);
+  rcc_periph_clock_enable(RCC_GPIOB);
+  gpio_mode_setup(GPIOA, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO15);
+  gpio_mode_setup(GPIOD, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO2);
+  gpio_mode_setup(GPIOB, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO2);
+  
+
+  gpio_set(GPIOA, GPIO15);
+  gpio_set(GPIOD, GPIO2);
+  
+ // monitoring ADC for volatge level based on solar level
+    {
+   // if not suffiecient power level, switch off CDH and PLD 
+   }
+ 
+ // if sufficeient ouptut level --> generate switch command  to switch on PLD 
+ 
+    {
+    
+	//wait for power on CDH board 
+	
+	  perform task 
+ 
+    }
+ 
+ // if sufficeient ouptut level --> generate switch command  to switch on COM request 
+ 
+    {
+ 
+   //   wait for TAB request/ CDH request to power on COM TX/RX data
+   
+    }
