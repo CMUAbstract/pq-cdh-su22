@@ -1,0 +1,9 @@
+# KiCad
+pq-cdh-backups/
+software/libopencm3/
+*.bin
+*.hex
+*.o
+*.DS_Store
+utilites/stlink/
+utilites/gcc-arm-none-eabi-10.3-2021.10/    
