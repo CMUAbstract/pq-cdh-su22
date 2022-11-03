@@ -14,6 +14,7 @@
 #define FLASH_WRITE_ENABLE           0x06
 #define FLASH_QUAD_READ              0xED
 #define FLASH_PAGE_PROGRAM           0x02
+#define FLASH_READ_STATUS_REG        0x05
 
 #define QUADSPI_CCR_ADDRESS_24BIT    0b10
 
@@ -23,6 +24,10 @@ void init_qspi(void);
 void qspi_writeInstruction(uint8_t instruction);
 void qspi_writeData(uint8_t *data, uint32_t data_size, uint32_t address);
 void qspi_readData(uint8_t *data, uint32_t data_size, uint32_t address);
+void qspi_readDataNoAddress(uint8_t *dataBuffer, uint32_t dataBuffer_size, uint8_t instruction);
+void qspi_readDataWithAddress(uint8_t *dataBuffer, uint32_t dataBuffer_size, uint32_t address);
+void qspi_waitForChip();
+
 
 // TODO: Dummy cycles
 
@@ -48,9 +53,9 @@ void init_qspi(){
   rcc_periph_clock_enable(RCC_GPIOA);
   gpio_mode_setup(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO1 | GPIO0);
   gpio_mode_setup(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO2 | GPIO3 | GPIO6 | GPIO7);
-  // gpio_set_af(GPIOA, GPIO_AF10, GPIO3 | GPIO2 | GPIO6 | GPIO7);
-  gpio_set_af(GPIOA, GPIO_AF10, GPIO2 | GPIO3 | GPIO7);
-  gpio_set_af(GPIOA, GPIO_AF10, GPIO6);
+  gpio_set_af(GPIOA, GPIO_AF10, GPIO3 | GPIO2 | GPIO6 | GPIO7);
+  // gpio_set_af(GPIOA, GPIO_AF10, GPIO2 | GPIO3 | GPIO7);
+  // gpio_set_af(GPIOA, GPIO_AF10, GPIO6);
   gpio_set_af(GPIOB, GPIO_AF10, GPIO1 | GPIO0);
 
   // gpio_set(GPIOA, GPIO2); // set the Chip select line to high since it's active low
@@ -68,10 +73,23 @@ void init_qspi(){
   // set the flash size
   QUADSPI_DCR |= (FLASH_SIZE_POW_2 << QUADSPI_DCR_FSIZE_SHIFT);
 
-  // set address size to 24 bits
-  // initially set instructions to 1 line to configure the flash to qspi mode
-  QUADSPI_CCR |= (QUADSPI_CCR_ADDRESS_24BIT << QUADSPI_CCR_ADSIZE_SHIFT) | 
-                 (QUADSPI_CCR_MODE_1LINE << QUADSPI_CCR_IMODE_SHIFT);
+  // // set address size to 24 bits
+  // // initially set instructions to 1 line to configure the flash to qspi mode
+  // QUADSPI_CCR |= (QUADSPI_CCR_ADDRESS_24BIT << QUADSPI_CCR_ADSIZE_SHIFT) | 
+  //                (QUADSPI_CCR_MODE_1LINE << QUADSPI_CCR_IMODE_SHIFT);
+
+  // Specify the instruction mode via the CCR (use 4 lines for instructions)
+  QUADSPI_CCR &= ~(QUADSPI_CCR_IMODE_MASK  |
+                   QUADSPI_CCR_ADMODE_MASK |
+                   QUADSPI_CCR_DMODE_MASK  |
+                   QUADSPI_CCR_INST_MASK);
+
+  QUADSPI_CCR |= (QUADSPI_CCR_MODE_1LINE << QUADSPI_CCR_IMODE_SHIFT) |
+                 (QUADSPI_CCR_MODE_NONE << QUADSPI_CCR_ADMODE_SHIFT) |
+                 (QUADSPI_CCR_ADDRESS_24BIT << QUADSPI_CCR_ADSIZE_SHIFT) |
+                 (QUADSPI_CCR_MODE_NONE << QUADSPI_CCR_DMODE_SHIFT);
+  
+  QUADSPI_CCR = (QUADSPI_CCR & ~QUADSPI_CCR_FMODE_MASK) | (QUADSPI_CCR_FMODE_IWRITE <<  QUADSPI_CCR_FMODE_SHIFT);
 
   // Set the Sample Shifting Settings in CR. Setup to read half a clock cycle later
   QUADSPI_CR |= QUADSPI_CR_SSHIFT;
@@ -89,11 +107,21 @@ void init_qspi(){
   QUADSPI_CR &= ~QUADSPI_CR_EN;
 
   // tell the flash to enter quad mode
+  // gpio_set_af(GPIOA, GPIO_AF10, GPIO6);
+  while(QUADSPI_SR & QUADSPI_SR_BUSY);
+  blinkLedBrief();
+
   qspi_writeInstruction(FLASH_WRITE_ENABLE);
 
-  // read the status register to see if the flash is ready
-  uint8_t buf;
-  qspi_readData(&buf, 1, 0x05);
+  // qspi_waitForChip();
+}
+
+void qspi_waitForChip(){
+  uint8_t status = 0;
+  do{
+    qspi_readDataNoAddress(&status, 1, FLASH_READ_STATUS_REG);
+  // }while(status & 0x01);
+  }while(false);
 }
 
 void qspi_writeInstruction(uint8_t instruction){
@@ -101,7 +129,7 @@ void qspi_writeInstruction(uint8_t instruction){
   while(QUADSPI_SR & QUADSPI_SR_BUSY);
 
   // Set FMODE to 00 for Indirect Write Mode
-  QUADSPI_CCR = (QUADSPI_CCR & ~QUADSPI_CCR_FMODE_MASK) | (QUADSPI_CCR_FMODE_IWRITE <<  QUADSPI_CCR_FMODE_MASK);
+  QUADSPI_CCR = (QUADSPI_CCR & ~QUADSPI_CCR_FMODE_MASK) | (QUADSPI_CCR_FMODE_IWRITE <<  QUADSPI_CCR_FMODE_SHIFT);
 
   // No data to write, set DLR to 0
   QUADSPI_DLR = 0;
@@ -120,7 +148,7 @@ void qspi_writeInstruction(uint8_t instruction){
   QUADSPI_CR |= QUADSPI_CR_EN;
 
   // setup the the instructions and address
-  QUADSPI_CCR |= (0xff << QUADSPI_CCR_INST_SHIFT);
+  QUADSPI_CCR |= (instruction << QUADSPI_CCR_INST_SHIFT);
 
   // wait till the transfer is complete
   while(!(QUADSPI_SR & QUADSPI_SR_TCF));
@@ -131,11 +159,13 @@ void qspi_writeInstruction(uint8_t instruction){
 }
 
 void qspi_writeData(uint8_t *dataBuffer, uint32_t dataBuffer_size, uint32_t address){
-  // wait for the bus to be ready
+
+  
   while(QUADSPI_SR & QUADSPI_SR_BUSY);
 
   // Set FMODE to 00 for Indirect Write Mode
-  QUADSPI_CCR = (QUADSPI_CCR & ~QUADSPI_CCR_FMODE_MASK) | (QUADSPI_CCR_FMODE_IWRITE <<  QUADSPI_CCR_FMODE_MASK);
+  QUADSPI_CCR = (QUADSPI_CCR & ~QUADSPI_CCR_FMODE_MASK) | (QUADSPI_CCR_FMODE_IWRITE <<  QUADSPI_CCR_FMODE_SHIFT);
+
 
   // Specify the instruction mode via the CCR (use 4 lines for instructions)
   QUADSPI_CCR &= ~(QUADSPI_CCR_IMODE_MASK  |
@@ -147,33 +177,74 @@ void qspi_writeData(uint8_t *dataBuffer, uint32_t dataBuffer_size, uint32_t addr
                  (QUADSPI_CCR_MODE_4LINE << QUADSPI_CCR_ADMODE_SHIFT) |
                  (QUADSPI_CCR_MODE_4LINE << QUADSPI_CCR_DMODE_SHIFT);
 
+  
   // Set the number of bytes to write via the DLR (data length register)
   //@note: hardcoding to 1 bytes for now
-  QUADSPI_DLR = (uint32_t) 0x1;
-
-  // setup the the instructions and address
-  QUADSPI_CCR |= (FLASH_PAGE_PROGRAM << QUADSPI_CCR_INST_SHIFT);
+  QUADSPI_DLR = (uint32_t) 0x0; // NOTE: 0x0 is 1 byte, 0x1 is 2 bytes, etc.
 
   // Enable the peripheral via the CR
   QUADSPI_CR |= QUADSPI_CR_EN;
 
+  QUADSPI_CCR |= (FLASH_PAGE_PROGRAM << QUADSPI_CCR_INST_SHIFT);
   QUADSPI_AR = address;
-  QUADSPI_DR = dataBuffer[0];
+  while((QUADSPI_SR & QUADSPI_SR_TCF) == 0);
+  QUADSPI_DR = (uint32_t) 0x000000ff; // TODO: Temp
 
   // wait till the transfer is complete
-  while(!(QUADSPI_SR & QUADSPI_SR_TCF));
+  while(QUADSPI_SR & QUADSPI_SR_BUSY);
+  QUADSPI_DR = (uint32_t) 0x000000ff; // TODO: Temp
 
   // Disable the peripheral via the CR
   QUADSPI_CR &= ~QUADSPI_CR_EN;
 }
 
-
-void qspi_readData(uint8_t *dataBuffer, uint32_t dataBuffer_size, uint32_t address){
+void qspi_readDataNoAddress(uint8_t *dataBuffer, uint32_t dataBuffer_size, uint8_t instruction){
   // wait for the bus to be ready
   while(QUADSPI_SR & QUADSPI_SR_BUSY);
 
   // Set FMODE to 01 for Indirect Read Mode
-  QUADSPI_CCR = (QUADSPI_CCR & ~QUADSPI_CCR_FMODE_MASK) | (QUADSPI_CCR_FMODE_IREAD <<  QUADSPI_CCR_FMODE_MASK);
+  QUADSPI_CCR = (QUADSPI_CCR & ~QUADSPI_CCR_FMODE_MASK) | (QUADSPI_CCR_FMODE_IREAD <<  QUADSPI_CCR_FMODE_SHIFT);
+
+  // Specify the instruction mode via the CCR (use 4 lines for instructions)
+  QUADSPI_CCR &= ~(QUADSPI_CCR_IMODE_MASK  |
+                   QUADSPI_CCR_ADMODE_MASK |
+                   QUADSPI_CCR_DMODE_MASK  |
+                   QUADSPI_CCR_INST_MASK);
+
+  QUADSPI_CCR |= (QUADSPI_CCR_MODE_4LINE << QUADSPI_CCR_IMODE_SHIFT) |
+                 (QUADSPI_CCR_MODE_NONE << QUADSPI_CCR_ADMODE_SHIFT) |
+                 (QUADSPI_CCR_MODE_4LINE << QUADSPI_CCR_DMODE_SHIFT);
+
+  // Set the number of bytes to read via the DLR (data length register)
+  //@note: hardcoding to 1 bytes for now
+  QUADSPI_DLR = (uint32_t) 0x0; // NOTE: 0x0 is 1 byte, 0x1 is 2 bytes, etc.
+                  
+  // Enable the peripheral via the CR
+  QUADSPI_CR |= QUADSPI_CR_EN;
+
+  // setup the the read instruction
+  QUADSPI_CCR |= (instruction << QUADSPI_CCR_INST_SHIFT);
+
+  // wait till the transfer is complete
+  while(!(QUADSPI_SR & QUADSPI_SR_TCF));
+  dataBuffer[0] = (uint8_t) (QUADSPI_DR && (uint32_t) 0xff);
+  while(QUADSPI_SR & QUADSPI_SR_BUSY);
+
+  //@note: Hardcoding to 1 byte for now
+  // Get RX data from the DR
+
+  // Disable the peripheral
+  QUADSPI_CR &= ~QUADSPI_CR_EN;
+
+}
+
+void qspi_readDataWithAddress(uint8_t *dataBuffer, uint32_t dataBuffer_size, uint32_t address){
+
+  // wait for the bus to be ready
+  while(QUADSPI_SR & QUADSPI_SR_BUSY);
+
+  // Set FMODE to 01 for Indirect Read Mode
+  QUADSPI_CCR = (QUADSPI_CCR & ~QUADSPI_CCR_FMODE_MASK) | (QUADSPI_CCR_FMODE_IREAD <<  QUADSPI_CCR_FMODE_SHIFT);
 
   // Specify the instruction mode via the CCR (use 4 lines for instructions)
   QUADSPI_CCR &= ~(QUADSPI_CCR_IMODE_MASK  |
@@ -187,7 +258,7 @@ void qspi_readData(uint8_t *dataBuffer, uint32_t dataBuffer_size, uint32_t addre
 
   // Set the number of bytes to write via the DLR (data length register)
   //@note: hardcoding to 1 bytes for now
-  QUADSPI_DLR = (uint32_t) 0x1;
+  QUADSPI_DLR = (uint32_t) 0xa; // NOTE: 0x0 is 1 byte, 0x1 is 2 bytes, etc.
                   
   // Enable the peripheral via the CR
   QUADSPI_CR |= QUADSPI_CR_EN;
@@ -197,11 +268,18 @@ void qspi_readData(uint8_t *dataBuffer, uint32_t dataBuffer_size, uint32_t addre
   QUADSPI_AR = address;
 
   // wait till the transfer is complete
-  while(!(QUADSPI_SR & QUADSPI_SR_TCF));
+  for(int i = 0; i < 0xa; i++){
+    while(!(QUADSPI_SR & QUADSPI_SR_TCF));
+    dataBuffer[0] = QUADSPI_DR;
+  }
+  while(QUADSPI_SR & QUADSPI_SR_BUSY);
 
   //@note: Hardcoding to 1 byte for now
   // Get RX data from the DR
   dataBuffer[0] = QUADSPI_DR;
+
+  // Disable the peripheral
+  QUADSPI_CR &= ~QUADSPI_CR_EN;
 }
 
 

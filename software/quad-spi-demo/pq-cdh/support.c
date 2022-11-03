@@ -167,7 +167,7 @@ void blinkLedBrief()
   {
     gpio_clear(GPIOB, GPIO0);
     gpio_toggle(GPIOC, GPIO10);
-    for (int i = 0; i < 8000000; i++)
+    for (int i = 0; i < 800; i++)
     {
       __asm__("nop");
     }

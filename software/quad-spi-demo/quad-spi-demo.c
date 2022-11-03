@@ -12,31 +12,23 @@ int main(void)
   // init_uart();
   init_led();
   // blinkLedBrief();
+  blinkLedBrief();
+
   init_qspi();
-  // uint8_t buf[1] = {5};
-  // qspi_writeData(buf, 1, 0x00000000);
-  // uint8_t test = flash_readStatusRegister();
 
-  // uint8_t mfrId, memory, capacity;
-  // // flash_readProductInformation(&mfrId, &memory, &capacity);
+  // qspi_waitForChip();
+  // blinkLedBlocking();
+  blinkLedBrief();
 
-  // // Create a dummy buffer
-  // uint8_t dataBuffer_size = 10;
-  // uint8_t dataBuffer[dataBuffer_size];
-  // for(uint32_t i=0; i<dataBuffer_size; i++){
-  //   dataBuffer[i] = i + 33;
-  // }
+  uint8_t buf[1] = {5};
+  qspi_writeData(buf, 1, 0x0);
 
-  // uint32_t test_address = 0x00000010;
+  blinkLedBrief();
+  qspi_waitForChip();
 
-  // // Write the buffer to the flash
-  // // flash_writeData(dataBuffer, dataBuffer_size, test_address);
-
-  // // Read the buffer back from the flash
-  // uint8_t dataBuffer_read[dataBuffer_size];
-  // flash_readData(dataBuffer_read, dataBuffer_size, test_address);
-
-  // flash_readProductInformation(&mfrId, &memory, &capacity);
+  // // // Read the buffer back from the flash
+  uint8_t buf2[1] = {0};
+  qspi_readDataWithAddress(buf2, 1, 0x0);
 
   blinkLedBlocking();
 
