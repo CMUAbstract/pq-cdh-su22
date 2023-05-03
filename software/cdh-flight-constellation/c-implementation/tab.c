@@ -124,7 +124,7 @@ void push_rx_cmd_buff(rx_cmd_buff_t* rx_cmd_buff_o, uint8_t b) {
 void write_reply(rx_cmd_buff_t* rx_cmd_buff_o, tx_cmd_buff_t* tx_cmd_buff_o) {
   if(
    rx_cmd_buff_o->state==RX_CMD_BUFF_STATE_COMPLETE &&
-   tx_cmd_buff_o->empty //&& (rx_cmd_buff_o->data[HWID_LSB_INDEX] == 0x41) && (rx_cmd_buff_o->data[HWID_MSB_INDEX] == 0x54)
+   tx_cmd_buff_o->empty && (rx_cmd_buff_o->data[HWID_LSB_INDEX] == 0x41) && (rx_cmd_buff_o->data[HWID_MSB_INDEX] == 0x54)  // filter to generate response only to HWID 0x5441, and rejects other IDs
   ) {
     tx_cmd_buff_o->data[START_BYTE_0_INDEX] = START_BYTE_0;
     tx_cmd_buff_o->data[START_BYTE_1_INDEX] = START_BYTE_1;
