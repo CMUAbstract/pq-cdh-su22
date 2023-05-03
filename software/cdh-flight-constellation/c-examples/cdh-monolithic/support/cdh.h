@@ -48,4 +48,5 @@ void init_uart(void);
 void rx_usart1(rx_cmd_buff_t* rx_cmd_buff_o);
 void reply(rx_cmd_buff_t* rx_cmd_buff_o, tx_cmd_buff_t* tx_cmd_buff_o);
 void tx_usart1(tx_cmd_buff_t* tx_cmd_buff_o);
+uint8_t rx_usart_hw_check(rx_cmd_buff_t* rx_cmd_buff_o); 
 #endif

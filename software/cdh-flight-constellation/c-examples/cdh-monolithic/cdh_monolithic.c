@@ -35,9 +35,16 @@ int main(void) {
   
   // TAB loop
   while(1) {
+  
     rx_usart1(&rx_cmd_buff);           // Collect command bytes
+    hw_matched = rx_usart_hw_check(&rx_cmd_buff);  // check if configured HWIDs matches
+    if (hw_matched == 1)                           //if HWIDs matched, parse TAB command and form response
+    {
+    hw_matched =0;
     reply(&rx_cmd_buff, &tx_cmd_buff); // Command reply logic
     tx_usart1(&tx_cmd_buff);           // Send a response if any
+    }
+    
    }
    
   // Should never reach this point

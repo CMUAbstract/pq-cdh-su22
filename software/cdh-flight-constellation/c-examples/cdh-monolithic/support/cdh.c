@@ -207,6 +207,32 @@ void init_uart(void) {
 
 // Feature functions
 
+uint8_t rx_usart_hw_check(rx_cmd_buff_t* rx_cmd_buff_o) {
+  uint8_t is_hw_matched = 0; 
+  if( 
+  rx_cmd_buff_o->state==RX_CMD_BUFF_STATE_COMPLETE  //  Command not complete
+  ) {   
+  
+  	if ((rx_cmd_buff_o->data[HWID_LSB_INDEX] == 0x41) && (rx_cmd_buff_o->data[HWID_MSB_INDEX] == 0x54))
+  	// configurable part : need to updated for constellation stack wit different HWIDs 
+  	// HWIDs 1 --> 0x5440
+  	// HWIDs 1 --> 0x5441 (Here in this code )
+  	// for e.g uncomment below line, use for stack constellation with HWID --> 0x5440   
+  	       
+        //if ((rx_cmd_buff_o->data[HWID_LSB_INDEX] == 0x40) && (rx_cmd_buff_o->data[HWID_MSB_INDEX] == 0x54))
+  	
+  	{
+    	  is_hw_matched = 1;   // return 1, when HWIDs matched
+    	}
+       else{
+
+          clear_rx_cmd_buff(rx_cmd_buff_o);  // clear RX buffers to stop unintentional TX
+        }                          
+	
+  }  
+	return is_hw_matched;
+}
+
 void rx_usart1(rx_cmd_buff_t* rx_cmd_buff_o) {
   while(                                             // while
    usart_get_flag(USART1,USART_ISR_RXNE) &&          //  USART1 RX not empty AND
